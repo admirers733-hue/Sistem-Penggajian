@@ -1,58 +1,145 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Dashboard</title>
-<link rel="stylesheet" href="style.css">
-</head>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-<body>
+body{
+    background:#eaf3ff;
+}
 
-<h2>DATA PENGGAJIAN</h2>
+/* LOGIN */
 
-<input type="text" id="nama" placeholder="Nama">
+.login-box{
+    width:400px;
+    background:white;
+    margin:80px auto;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
 
-<input type="text" id="jabatan" placeholder="Jabatan">
+.login-box h1{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:10px;
+}
 
-<input type="number" id="gaji" placeholder="Gaji">
+.login-box p{
+    text-align:center;
+    margin-bottom:20px;
+}
 
-<button onclick="tambahData()">Tambah</button>
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
 
-<br><br>
+.login-box button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#1565c0;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
 
-<input type="text" id="cari" placeholder="Cari Nama">
+.login-box button:hover{
+    background:#0d47a1;
+}
 
-<button onclick="cariData()">Cari</button>
+.info{
+    margin-top:20px;
+    background:#f5f5f5;
+    padding:10px;
+    border-radius:8px;
+}
 
-<br><br>
+/* DASHBOARD */
 
-<table border="1">
+.container{
+    width:90%;
+    margin:30px auto;
+}
 
-<thead>
+.container h1{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:20px;
+}
 
-<tr>
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
 
-<th>No</th>
+.card h2{
+    margin-bottom:15px;
+    color:#1565c0;
+}
 
-<th>Nama</th>
+label{
+    display:block;
+    margin-top:10px;
+}
 
-<th>Jabatan</th>
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
 
-<th>Gaji</th>
+.button-group button{
+    padding:10px 18px;
+    margin-right:10px;
+    border:none;
+    border-radius:6px;
+    background:#1565c0;
+    color:white;
+    cursor:pointer;
+}
 
-<th>Aksi</th>
+.button-group button:hover{
+    background:#0d47a1;
+}
 
-</tr>
+table{
+    width:100%;
+    border-collapse:collapse;
+}
 
-</thead>
+table th{
+    background:#1565c0;
+    color:white;
+    padding:12px;
+}
 
-<tbody id="tabel">
+table td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
 
-</tbody>
+table tr:hover{
+    background:#f1f7ff;
+}
 
-</table>
+button.edit{
+    background:green;
+}
 
-<script src="script.js"></script>
-
-</body>
-</html>
+button.hapus{
+    background:red;
+}

@@ -1,32 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Sistem Penggajian</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h2>DATA PENGGAJIAN</h2>
+<div class="container">
 
-<input type="text" id="nama" placeholder="Nama">
+<h1>SISTEM PENGGAJIAN</h1>
 
-<input type="text" id="jabatan" placeholder="Jabatan">
+<div class="card">
 
-<input type="number" id="gaji" placeholder="Gaji">
+<h2>Input Data Karyawan</h2>
 
-<button onclick="tambahData()">Tambah</button>
+<input type="hidden" id="indexEdit">
 
-<br><br>
+<label>Nama Karyawan</label>
 
-<input type="text" id="cari" placeholder="Cari Nama">
+<input type="text" id="nama">
 
-<button onclick="cariData()">Cari</button>
+<label>Jabatan</label>
 
-<br><br>
+<input type="text" id="jabatan">
 
-<table border="1">
+<label>Gaji</label>
+
+<input type="number" id="gaji">
+
+<div class="button-group">
+
+<button onclick="tambahData()">
+Tambah
+</button>
+
+<button onclick="updateData()">
+Update
+</button>
+
+<button onclick="resetForm()">
+Reset
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Pencarian Data</h2>
+
+<input
+type="text"
+id="cari"
+placeholder="Cari Nama..."
+onkeyup="cariData()">
+
+</div>
+
+<div class="card">
+
+<h2>Daftar Penggajian</h2>
+
+<table>
 
 <thead>
 
@@ -46,13 +90,18 @@
 
 </thead>
 
-<tbody id="tabel">
+<tbody id="tabelData">
 
 </tbody>
 
 </table>
 
+</div>
+
+</div>
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
