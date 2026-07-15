@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h2>Data Penggajian</h2>
+
+<input type="text" id="nama" placeholder="Nama">
+
+<input type="text" id="jabatan" placeholder="Jabatan">
+
+<input type="number" id="gaji" placeholder="Gaji">
+
+<button onclick="tambahData()">Tambah</button>
+
+<br><br>
+
+<input type="text" id="cari" placeholder="Cari Nama">
+
+<button onclick="cariData()">Cari</button>
+
+<table border="1">
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>Nama</th>
+
+<th>Jabatan</th>
+
+<th>Gaji</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabel">
+
+</tbody>
+
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
